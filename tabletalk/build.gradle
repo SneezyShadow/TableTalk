@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.shongrimes'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '14'
+sourceCompatibility = '13'
 
 repositories {
 	mavenCentral()
