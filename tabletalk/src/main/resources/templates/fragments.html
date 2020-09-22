@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link th:href="@{styles.css}">
+</head>
+<header th:fragment="header">
+    <h1 align="center" th:text="${title}"></h1> <br>
+    <a href="/"><button>Home</button></a>
+    <a href="/user/login"><button>Login</button></a>
+    <a href="/user/register"><button>Register</button></a> <br>
+</header>
+</html>

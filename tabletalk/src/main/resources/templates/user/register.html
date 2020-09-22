@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head"/>
+<header th:replace="fragments :: header"/>
+
+<body>
+
+<form action="register" method="post">
+
+    <div>
+        
+        <p class="error" th:errors="${user.name}"></p>
+        <label>Name<input th:field="${user.name}"></label>
+    </div>
+
+    <div>
+
+        <p class="error" th:errors="${user.username}"></p>
+        <p th:text="${userError}"></p> <br>
+        <label>Username<input th:field="${user.username}"></label>
+    </div>
+
+    <input type="submit" value="Register">
+</form>
+</body>
+</html>

@@ -1,6 +1,7 @@
-package com.shongrimes.tabletalk;
+package com.shongrimes.tabletalk.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -8,15 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Home {
 
-    @RequestMapping(value = "")
-    @ResponseBody
-    public String home(){
-        return "Hello World";
-    }
-
-    @RequestMapping(value = "goodbye")
-    @ResponseBody
-    public String goodbye(){
-        return "Goodbye";
+    @GetMapping
+    public String displayHomePage(Model model){
+        model.addAttribute("title", "Tabletalk");
+        return "index";
     }
 }
